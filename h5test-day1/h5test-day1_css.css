@@ -1,0 +1,15 @@
+div {
+  background: red;
+  color: rgb(219, 237, 68);
+}
+span {
+  background: blue;
+  font-size: 30px;
+  color: khaki;
+  /*字体点缀：underline标示下划线*/
+  text-decoration: underline;
+  /*字体风格,italic表示斜体*/
+  font-style: italic;
+  /*字体加粗*/
+  font-weight: bold;
+}
