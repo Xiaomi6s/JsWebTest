@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>外边距和等宽居中</title>
+    <style>
+    body{
+      /*浏览器默认在上下左右方向有10px的外边距*/
+      /*margin外边距是一个标签距离周围其他标签的距离*/
+      margin: 0px;
+    }
+    #hh{
+      height: 200px;
+      width: 100%;
+      background-color: palevioletred;
+      border: 2px solid red;
+      /*padding是内边距，是从一个标签的外边距向内其他内容的距离默认为0px*/
+      padding: 55px;
+    }
+    #hh div{
+      /*border: 外边框，有三个值分别是边框线宽度，边框线颜色，边框线样式*/
+      border: 2px black solid;
+      height: 90px;
+      width: 50%;
+      /*margin: 10px 20px 30px 40px; 表示上右下左的距离分别是10，20， 30， 40*/
+      /*margin: 10px 20px 30px;表示上20 左右20 下30*/
+      /*margin: 10px 20px 表示上下10 左右20*/
+      /*margin: 10px 表示四边都为10*/
+      /*auto 表示自动赋值，当一个标签宽度一定，再将其左右边距设置为auto则出现居中现象，这种技术叫等宽居中*/
+      /*margin: 0px auto;*/
+      /*margin-top: 20px; */
+      /*表示单独设置上边的外边距,各方向外边距和内边距都可以单独设置*/
+      margin: 0px auto;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="hh">
+      <div>
+        看到了三个老师看见过快点上两节课老板娘是领健康零食个单词快
+        速对接会更快速度发来的伤口就付款了圣诞节里看风景 就大概地方
+      </div>
+    </div>
+
+  </body>
+</html>
