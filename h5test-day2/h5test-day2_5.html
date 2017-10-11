@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    <!-- 文档流，标签在文档中的布局，文档流方向是从上到下从左到右排版，在文档流中块级标签独占一行，行标签和行内-块级标签可以共占一行，行内标签、行内块标签和块级标签永远不可能同行 -->
+  </head>
+  <style>
+  main{
+    height: 80px;
+    width: 100%;
+    border: 2px solid red;
+  }
+  span{
+    color: blue;
+  }
+  /*main span{
+    color: green;
+  }*/
+  /*父子选择器 格式 父标签名 类名或标签名     父子选择器的精确度更高 */
+  /*伪选择器.格式 A:nth-child(n)  选中几个并列在一起的A标签中的第n个 注意:如果其中夹杂有其他标签,这种方式不再适用,易出错 这种方式一般用于需要隔行选中时,例如n的值取2n+1 */
+  main span:nth-child(2n+1){
+    color: red;
+    /*relative设置相对定位，设置相对定位后标签的位置将以原来在文档流中的位置为参考按照指定的距离移动*/
+    position: relative;
+    top: 10px;/*顶部距离原来的10px，即向下移动10px*/
+    left: 5px;  /*左边距离原来5px，即向右移动5px*/
+    right: 10px; /*右边距离原来10px，即向左移动10px*/
+  }
+  </style>
+  <body>
+    <main>
+      <span>我是文字1</span>
+      <span>我是文字2</span>
+      <span>我是文字3</span>
+      <span>我是文字4</span>
+    </main>
+
+  </body>
+</html>

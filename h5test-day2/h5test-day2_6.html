@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>绝对定位</title>
+    <style>
+    body{
+      margin: 0px;
+    }
+    main{
+      height: 300px;
+      width: 300px;
+      border: 2px solid black;
+      margin: 0px auto;
+      position: relative;
+    }
+    #frist, #second{
+      height: 30px;
+      width: 80%;
+      border: 1px solid red;
+      margin: 10px auto;
+    }
+    #second{
+      height: 200px;
+      position: relative;
+    }
+    span:nth-child(1){
+      /*absolute 绝对定位，标签设置为绝对定位后就脱离登录文档流，此时其他标签就会占据它原来的位置*/
+      /*如果一个标签设置了绝对定位，将会寻找父标签的定位方式，如果他的所有父标签都没有进行定位，那么他就相对于body进行定位,如果他的某个父标签进行了定位（不管是absolute或是relative）那么他将参照这个设置了定位的标签进行定位，当多个父标签都进行了定位时则依据最近的为参照进行定位*/
+      position: absolute;
+      top: 30px;
+      left: 10px;
+    }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="frist">我是第一个div</div>
+      <div id="second">
+        <span>span1</span>
+        <span>span2</span>
+        <span>span3</span>
+        <span>span4</span>
+      </div>
+    </main>
+
+  </body>
+</html>
