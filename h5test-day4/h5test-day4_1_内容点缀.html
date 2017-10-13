@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>内容点缀</title>
+    <!-- :before和:after标签可以对标签内容添加点缀文本，一般在页面排版时不会将一些非内容文本放入正文标签内以防止污染文本，导致浏览器检索的准确度下降。 -->
+    <style>
+    p::before{
+      content: "摘要：";
+      font-weight: bold;
+    }
+    section::after{
+      content: "_这是后点缀";
+      color: red;
+    }
+    </style>
+  </head>
+  <body>
+  <p>楼上的几个了的收费多少了空间发的是是否_前点缀</p>
+  <section>
+    这是一段话,给他加上文本点缀,后点缀
+  </section>
+  </body>
+</html>

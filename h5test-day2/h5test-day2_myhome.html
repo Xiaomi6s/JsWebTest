@@ -9,10 +9,12 @@
     }
     #nav{
       position: fixed;
+      top: 0px;
       height: 100px;
       width: 100%;
       border-bottom: 1px solid gray;
       background-color: white;
+      z-index: 1000;
     }
     #qq{
       position: relative;
@@ -31,6 +33,74 @@
       right: 70px;
       top: 40px;
     }
+    #qq div span{
+      margin-left: 20px;
+    }
+    #qq div span a{
+      color: darkred;
+      text-decoration: none;
+    }
+    h3{
+      color: firebrick;
+      border-left: 15px solid firebrick;
+      padding-left: 10px;
+    }
+    #header p{
+      width: 900px;
+      margin: 10px auto;
+      line-height: 25px;
+      /*文字间隔宽度*/
+      letter-spacing: 2px;
+      /*单词间隔,对汉语无效,只对空格等实体符号起作用*/
+      word-spacing: 10px;
+    }
+    .section{
+      width: 900px;
+      margin: 10px auto;
+    }
+    .section img{
+      width: 100%;
+      margin: 0px auto;
+    }
+    footer{
+      width: 900px;
+      margin: 30px auto;
+      border-top: 1px solid gray;
+      padding-left: 10px;
+    }
+    footer span{
+      color: darkgray;
+      font-size: 14px;
+    }
+    p{
+      text-indent: 2em;
+    }
+    #img{
+      position: relative;
+    }
+    #wf{
+      position: absolute;
+      width: 150px;
+      border-radius: 50%;
+      left: 100px;
+      top: 30px;
+    }
+    #lry{
+      position: absolute;
+      width: 210px;
+      height: 210px;
+      border-radius: 50%;
+      left: 300px;
+      top: 160px;
+    }
+    #ldh{
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        right: 100px;
+        top: 60px;
+    }
     </style>
   </head>
   <body>
@@ -40,15 +110,15 @@
           <img src="../images/day2_workTestImages/logo.png" alt="">
           <div>
             <span><a href="#">首页</a></span>
-            <span><a href="#">HTML5</a></span>
-            <span><a href="#">我的同学</a></span>
-            <span><a href="#">我的家乡</a></span>
-            <span><a href="#">我的学校</a></span>
+            <span><a href="#html5">HTML5</a></span>
+            <span><a href="#myClass">我的同学</a></span>
+            <span><a href="#hometown">我的家乡</a></span>
+            <span><a href="#mySchool">我的学校</a></span>
             <span><a href="#">关于我</a></span>
           </div>
         </div>
       </nav>
-      <section>
+      <section class="section">
         <img src="../images/day2_workTestImages/header.jpg" alt="">
         <p>“学好一门技术的唯一方法是使用它，在使用它的过程
             中才能真正学会它。 如果能够在使用它的过程中体会
@@ -56,7 +126,7 @@
             过程中多多练习，多敲代码一定会有回报，意想不到的收
             获都会在使用的过程中迸发出来。”</p>
       </section>
-      <section>
+      <section class="section" id="html5">
         <h3>HTML5</h3>
         <img src="../images/day2_workTestImages/html5.jpg" alt="">
         <p>从小就喜欢学习，感觉自己的自学能力超强，也喜欢把自己学会
@@ -65,13 +135,19 @@
             要有较好的技术，也要对学生严格要求。放任不管只有部分同学
             能安心学习，严格要求才能保证绝大多数同学都能稳下心来好好学习。</p>
       </section>
-      <section>
+      <section class="section" id="myClass">
         <h3>我的同学</h3>
-        <img src="../images/day2_workTestImages/html5.jpg" alt="">
+        <div id="img">
+          <img src="../images/day2_workTestImages/html5.jpg" alt="">
+          <img id="wf" src="../images/day2_workTestImages/wf.png" alt="">
+          <img id="lry" src="../images/day2_workTestImages/lry.jpg" alt="">
+          <img id="ldh" src="../images/day2_workTestImages/ldh.jpg" alt="">
+        </div>
+
         <p>从王菲、刘若英、刘德华：很高兴和你们一起学习HTML5，感谢在
             这个美好的季节遇见你们！</p>
       </section>
-      <section>
+      <section class="section" id="hometown">
         <h3>我的家乡</h3>
         <img src="../images/day2_workTestImages/hometown.JPG" alt="">
         <p>我的家乡在南阳市方城县。这是离我家最近的风景区----七峰山
@@ -79,14 +155,14 @@
             动的溪水，七峰山整个山脉都是由一块巨大的花岗岩构成，再加上
             山顶湖泊常年蓄积雨水就形成了一年四季溪流不断的美丽景观</p>
       </section>
-      <section>
+      <section class="section" id="mySchool">
         <h3>我的学校</h3>
         <img src="../images/day2_workTestImages/lzu.jpg" alt="">
         <p>我的大学----兰州大学。在这里度过了我人生中最难忘的四年时光。
             那里的风光，那里的人，那里的图书馆，还有那里蓝蓝的天和金黄的
             秋天，每每回想想来总是让心中久久不能平复</p>
       </section>
-      <section>
+      <section class="section">
         <h3>关于我</h3>
         <img src="../images/day2_workTestImages/ldh.jpg" alt="">
         <p>我是rxj来自河南省。。。。。。。</p>

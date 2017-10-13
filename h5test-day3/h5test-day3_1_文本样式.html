@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>文本样式</title>
+    <style>
+    #text_bold{
+      font-weight: bold;
+    }
+    #text_underline{
+      text-decoration: underline;
+    }
+    #text_delete{
+      text-decoration: line-through;
+    }
+    #text_qot{
+      quotes: '▷' '◁' '♠' '♠' '〖' '〗';
+    }
+    </style>
+  </head>
+  <span>普通文本没有任何样式，默认为16px大小</span><br>
+  <i>斜体文本，具有轻微的强调含义</i><br>
+  <b>加粗文本，也具有较轻微的强调含义</b><br>
+  <em>em标签内容具有较强的强调含义，内容以斜体显示</em><br>
+  <strong>strong标签内容具有很强的强调含义，文本以加粗显示</strong><br>
+  <span id="text_bold">普通文本可以通过修改样式进行加粗，但是没有任何语义上的强调含义</span>
+  <!-- em和strong都具有强调含义，但是strong的强调更强烈 em是从局部进行强调，表示侧重于某方面,strong是从整体进行强调文本的重要性，而没有特殊的侧重点-->
+  <!-- <hr>是水平分割线，常用于分割标题和正文内容 -->
+  <hr>
+  <ins>下划线文本，ins标签通常表示该文本是插入进来的</ins><br>
+  <u>u标签下划线文本，仅仅显示下划线，无特殊含义</u><br>
+  <span id="text_underline">普通文本也可以通过修改样式显示下划线，也并无特殊含义.</span>
+  <hr>
+  <s>删除线文本，s标签具有轻微的删除含义</s><br>
+  <del>删除线文本，del标签具有很强的删除含义，用来表示文档中被删除的文本内容</del><br>
+  <span id="text_delete">删除线文本，普通文本可以通过修改样式显示删除线文本，但是没有任何特殊含义</span><br>
+  <small>small标签表示以小号字体显示，一般用于文本标注</small><br>
+  正常文本<sup>上标文本</sup>
+  正常文本<sub>下标文本</sub>
+  <hr>
+  <q id="text_qot">q标签表示引用，表示文本内容是从某处引用的</q><br>
+  <q>如果多个q标签嵌套使用,内层<q>的应用符号将变为单</q>引号</q><br>
+  <!-- <q id="text_qot">苍茫<q>的天涯是<q>我的爱,天王盖</q>地虎宝塔镇</q>河妖,嘿嘿嘿</q> -->
+</html>
