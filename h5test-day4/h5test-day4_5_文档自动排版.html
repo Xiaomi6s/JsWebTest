@@ -7,6 +7,37 @@
     ul{
       list-style: none;
     }
+    /*一个标签的计数参考可以随意起名字也可以和标签同名*/
+    /*一般来说一个变量名的计数初始值初始化位置位于其计数加一标签的父标签里*/
+    main{
+      /*ounter-reset表示给一个标签的计数参考名字设置计数初值.
+      如果不设置初值,默认为0*/
+      counter-reset: a -1;
+    }
+    h1::before{
+      /*表示将某个计数参考名字的数字加1*/
+      counter-increment: a;
+      /*给对应标签添加前缀，前缀内容为某计数参考名的当前计数值*/
+      content: counter(a);
+    }
+    h2::before{
+      counter-increment: a;
+      content: counter(a);
+    }
+    ul{
+      counter-reset: b;
+    }
+    li::before{
+      counter-increment: b;
+      content: counter(a) '.' counter(b)
+    }
+    ul ul{
+      counter-reset: c;
+    }
+    ul ul li::before{
+      counter-increment: c;
+      content: counter(a) '.' counter(b) '.' counter(c);
+    }
     </style>
   </head>
   <body>
