@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>表格</title>
+    <style>
+    table{
+      border: 1px solid black;
+      width: 600px;
+      /*border-collapse表格边框线是否合并,取值有separate(默认),collapse(合并),inherit（继承）*/
+      border-collapse: collapse;
+      /*border-spacing设置单元格边框线的间距*/
+      /*border-spacing: 5px;*/
+
+    }
+    th,td{
+      border: 1px solid red;
+      text-align: center;
+    }
+    thead{
+      color: red;
+    }
+    </style>
+  </head>
+ <body>
+    <!-- table标签定义表格 -->
+    <table>
+      <!-- caption和table标签配合可以给表格定义标题 -->
+      <caption>课程表</caption>
+      <!--head标签定义表的表头， 使用head标签的前提是有父标签table  -->
+      <!--在复杂的表中，thead,tbody,tfoot应该配合使用，当三者都存在时要注意其出现的顺序为：thead tfoot tbody，这样可以保证浏览器在解析表格时，在数据未来到之前优先显示表格的头部和脚注信息 -->
+      <thead>
+        <tr>
+          <th>星期一</th>
+          <th>星期二</th>
+          <th>星期三</th>
+          <th>星期四</th>
+          <th>星期五</th>
+          <th>星期六</th>
+          <th>星期日</th>
+        </tr>
+      </thead>
+        <!-- tr表的一行 -->
+      <tr>
+        <!-- td定义表格内容单元格 -->
+        <td rowspan="5" colspan="2">HTML5</td>
+        <td>网络运营</td>
+        <td>PHP</td>
+        <td>UI设计</td>
+        <td colspan="2">大数据</td>
+      </tr>
+      <tr>
+        <td>HTML5</td>
+        <td>网络运营</td>
+        <!-- <td>PHP</td> -->
+        <td>UI设计</td>
+        <td>安卓</td>
+        <td>大数据</td>
+      </tr>
+      <tr>
+        <td>HTML5</td>
+        <td>网络运营</td>
+        <!-- <td>PHP</td> -->
+        <td rowspan="3">UI设计</td>
+        <td>安卓</td>
+        <td>大数据</td>
+      </tr>
+      <tr>
+        <td>HTML5</td>
+        <td>网络运营</td>
+        <!-- <td>PHP</td> -->
+        <td>UI设计</td>
+        <td>安卓</td>
+        <!-- <td>大数据</td> -->
+      </tr>
+      <tr>
+        <td>HTML5</td>
+        <td>网络运营</td>
+        <!-- <td>PHP</td> -->
+        <td>UI设计</td>
+        <td>安卓</td>
+        <!-- <td>大数据</td> -->
+      </tr>
+    </table>
+    <br>
+    <hr>
+    <br>
+    <table>
+      <caption>第二周课程表</caption>
+      <thead>
+        <tr>
+          <th>星期一</th>
+          <th>星期二</th>
+          <th>星期三</th>
+          <th>星期四</th>
+          <th>星期五</th>
+          <th>星期六</th>
+          <th>星期日</th>
+        </tr>
+      </thead>
+      <tr>
+        <td rowspan="5" colspan="2">HTML5</td>
+        <td>PHP</td>
+        <td colspan="2">IOS</td>
+        <td rowspan="3" colspan="2">Android</td>
+      </tr>
+      <tr>
+        <td>HTML5</td>
+        <td>PHP</td>
+        <td>IOS</td>
+        <!-- <td>Android</td> -->
+      </tr>
+      <tr>
+        <td>HTML5</td>
+        <td>PHP</td>
+        <td rowspan="3">IOS</td>
+        <!-- <td>Android</td> -->
+      </tr>
+      <tr>
+        <td>HTML5</td>
+        <td>PHP</td>
+        <td>IOS</td>
+        <td>Android</td>
+      </tr>
+      <tr>
+        <td>HTML5</td>
+        <td>PHP</td>
+        <td>IOS</td>
+        <td>Android</td>
+      </tr>
+    </table>
+
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>图片自动排版</title>
+    <style>
+    figure{
+      width: 500px;
+      margin: 10px auto;
+      text-align: center;
+    }
+    img{
+      width: 100%;
+    }
+    main{
+      counter-reset: fig;
+    }
+    figure{
+      counter-increment: fig;
+    }
+    figcaption::before{
+      content: '图' counter(fig) '：';
+    }
+    figcaption[lang=en]::before{
+      content: 'fig' counter(fig) '：'
+    }
+    </style>
+  </head>
+  <body>
+    <main>
+      <figure>
+        <img src="../images/day4_images/fig1.png" alt="">
+        <figcaption>示例,表示图片标题</figcaption>
+        <figcaption lang="en">test figration,kkbakkgjdjf</figcaption>
+      </figure>
+      <p>都是垃圾公司的奖励的刷卡缴费点上课了单身狗is富家大室</p>
+      <p>都是垃圾公司的奖励的刷卡缴费点上课了单身狗is富家大室</p>
+      <p>都是垃圾公司的奖励的刷卡缴费点上课了单身狗is富家大室</p>
+    </main>
+
+  </body>
+</html>
